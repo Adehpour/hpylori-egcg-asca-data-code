@@ -1,0 +1,33 @@
+Strain,Treatment,Culture,MIC,MBC,MIC_equals_MBC
+26695,Blank NP,1,256.0,512.0,False
+26695,Blank NP,2,512.0,512.0,True
+26695,Blank NP,3,256.0,256.0,True
+26695,Blank NP,4,256.0,512.0,False
+26695,Free EGCG,1,64.0,128.0,False
+26695,Free EGCG,2,32.0,32.0,True
+26695,Free EGCG,3,32.0,64.0,False
+26695,Free EGCG,4,32.0,128.0,False
+26695,EGCG-NP,1,16.0,32.0,False
+26695,EGCG-NP,2,16.0,32.0,False
+26695,EGCG-NP,3,8.0,16.0,False
+26695,EGCG-NP,4,16.0,16.0,True
+26695,Clarithromycin,1,0.03,0.03,True
+26695,Clarithromycin,2,0.03,0.12,False
+26695,Clarithromycin,3,0.03,0.06,False
+26695,Clarithromycin,4,0.03,0.06,False
+CLR-resistant,Blank NP,1,256.0,256.0,True
+CLR-resistant,Blank NP,2,128.0,256.0,False
+CLR-resistant,Blank NP,3,256.0,512.0,False
+CLR-resistant,Blank NP,4,256.0,512.0,False
+CLR-resistant,Free EGCG,1,64.0,128.0,False
+CLR-resistant,Free EGCG,2,32.0,128.0,False
+CLR-resistant,Free EGCG,3,64.0,128.0,False
+CLR-resistant,Free EGCG,4,16.0,32.0,False
+CLR-resistant,EGCG-NP,1,16.0,32.0,False
+CLR-resistant,EGCG-NP,2,16.0,32.0,False
+CLR-resistant,EGCG-NP,3,16.0,32.0,False
+CLR-resistant,EGCG-NP,4,16.0,32.0,False
+CLR-resistant,Clarithromycin,1,8.0,16.0,False
+CLR-resistant,Clarithromycin,2,8.0,16.0,False
+CLR-resistant,Clarithromycin,3,8.0,16.0,False
+CLR-resistant,Clarithromycin,4,8.0,32.0,False

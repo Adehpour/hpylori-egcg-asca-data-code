@@ -1,0 +1,39 @@
+panel,outcome,stratum,contrast,effect,unit,p_relation,p_at_reported_precision,family,source
+3A/B,Time-kill,26695,Loaded vs free at 8 h,-0.55,log10 CFU/mL,<,0.01,Planned within-strain Holm,Manuscript2(3).docx
+3A/B,Time-kill,26695,Loaded vs free at 24 h,-1.32,log10 CFU/mL,<,0.001,Planned within-strain Holm,Manuscript2(3).docx
+3C/D,Urease,26695,Loaded vs free,-18.36,points on relative scale,<,0.001,Planned Holm; original biomass inference used OD595,Manuscript2(3).docx
+3C/D,Biofilm,26695,Loaded vs free,-22.41,points on relative scale,=,0.007,Planned Holm; original biomass inference used OD595,Manuscript2(3).docx
+4,cagA,26695,Loaded vs free,0.59,expression ratio,<,0.0001,Holm across 6 comparisons on ΔCt,Manuscript2(3).docx
+4,ureA,26695,Loaded vs free,0.77,expression ratio,=,0.042,Holm across 6 comparisons on ΔCt,Manuscript2(3).docx
+4,babA,26695,Loaded vs free,0.58,expression ratio,<,0.0001,Holm across 6 comparisons on ΔCt,Manuscript2(3).docx
+5/6,Cell-associated CFU,26695,Loaded vs free,-0.3,log10 CFU/well,=,0.452,Within-strain Tukey,Manuscript2(3).docx
+5/6,pCagA/CagA,26695,Loaded vs free,0.6,ratio of geometric means,=,0.0086,Within-strain Tukey,Manuscript2(3).docx
+5/6,p65,26695,Loaded vs free,,ratio contrast,=,0.331,Within-strain Tukey,Manuscript2(3).docx
+5/6,IL-8,26695,Loaded vs free,,log10 scale,=,0.94,Within-strain Tukey,Manuscript2(3).docx
+3A/B,Time-kill,CLR-resistant,Loaded vs free at 8 h,-0.41,log10 CFU/mL,<,0.01,Planned within-strain Holm,Manuscript2(3).docx
+3A/B,Time-kill,CLR-resistant,Loaded vs free at 24 h,-1.12,log10 CFU/mL,<,0.001,Planned within-strain Holm,Manuscript2(3).docx
+3C/D,Urease,CLR-resistant,Loaded vs free,-30.38,points on relative scale,<,0.0001,Planned Holm; original biomass inference used OD595,Manuscript2(3).docx
+3C/D,Biofilm,CLR-resistant,Loaded vs free,-15.44,points on relative scale,=,0.084,Planned Holm; original biomass inference used OD595,Manuscript2(3).docx
+4,cagA,CLR-resistant,Loaded vs free,0.77,expression ratio,=,0.042,Holm across 6 comparisons on ΔCt,Manuscript2(3).docx
+4,ureA,CLR-resistant,Loaded vs free,0.75,expression ratio,=,0.042,Holm across 6 comparisons on ΔCt,Manuscript2(3).docx
+4,babA,CLR-resistant,Loaded vs free,0.73,expression ratio,=,0.003,Holm across 6 comparisons on ΔCt,Manuscript2(3).docx
+5/6,Cell-associated CFU,CLR-resistant,Loaded vs free,-0.28,log10 CFU/well,=,0.557,Within-strain Tukey,Manuscript2(3).docx
+5/6,pCagA/CagA,CLR-resistant,Loaded vs free,0.79,ratio of geometric means,=,0.477,Within-strain Tukey,Manuscript2(3).docx
+5/6,p65,CLR-resistant,Loaded vs free,,ratio contrast,=,0.214,Within-strain Tukey,Manuscript2(3).docx
+5/6,IL-8,CLR-resistant,Loaded vs free,,log10 scale,=,0.9995,Within-strain Tukey,Manuscript2(3).docx
+8,"Viability, free",Uninfected AGS,Versus vehicle,91.76,group mean (%),=,0.036,Holm-adjusted Welch; original family included blank,Manuscript2(3).docx
+8,"Viability, loaded",Uninfected AGS,Versus vehicle,98.57,group mean (%),=,0.376,Holm-adjusted Welch; original family included blank,Manuscript2(3).docx
+8,"LDH, free",Uninfected AGS,Versus vehicle,18.83,group mean (%),=,0.001,Holm-adjusted Welch; original family included blank,Manuscript2(3).docx
+8,"LDH, loaded",Uninfected AGS,Versus vehicle,12.82,group mean (%),=,0.054,Holm-adjusted Welch; original family included blank,Manuscript2(3).docx
+5/6,Cell-associated CFU,26695,Loaded vs untreated,,original model scale,=,0.034,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,Cell-associated CFU,26695,Loaded vs blank,,original model scale,=,0.022,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,Cell-associated CFU,Both,"Clinical vs 26695, free",,original model scale,=,0.033,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,Cell-associated CFU,Both,"Clinical vs 26695, loaded",,original model scale,=,0.0048,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,Cell-associated CFU,Both,"Clinical vs 26695, clarithromycin",,original model scale,=,0.003,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,p65,26695,Loaded vs untreated,,original model scale,=,0.0051,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,p65,CLR-resistant,Loaded vs untreated,,original model scale,=,0.0003,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,p65,CLR-resistant,Blank vs untreated,,original model scale,=,0.049,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,IL-8,26695,Loaded vs untreated,,original model scale,=,0.0007,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,IL-8,CLR-resistant,Loaded vs untreated,,original model scale,=,0.044,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,IL-8,26695,Free vs untreated,,original model scale,=,0.0046,Reported simple-effect comparison,Manuscript2(3).docx
+5/6,IL-8,Both,"Clinical vs 26695, blank",,original model scale,=,0.019,Reported simple-effect comparison,Manuscript2(3).docx

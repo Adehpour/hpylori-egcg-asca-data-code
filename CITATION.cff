@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the related Scientific Reports article and the corresponding archived dataset/software version."
+title: "EGCG–chitosan/TPP nanoparticle H. pylori study: ASCA data and analysis code"
+version: 1.0.0
+type: software
+authors:
+  - family-names: "Darvish Nezhad Khenar"
+    given-names: "Mona"
+  - family-names: "Dehpour"
+    given-names: "Abbas Ali"
+  - family-names: "Owrang"
+    given-names: "Mina"
+  - family-names: "Bishehkolaei"
+    given-names: "Roya"

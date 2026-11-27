@@ -1,0 +1,4 @@
+﻿,Blank NP,Blank NP,Blank NP,Blank NP,Free EGCG,Free EGCG,Free EGCG,Free EGCG,EGCG-NP,EGCG-NP,EGCG-NP,EGCG-NP,Clarithromycin,Clarithromycin,Clarithromycin,Clarithromycin
+,Culture 1,Culture 2,Culture 3,Culture 4,,,,,,,,,,,,
+MIC,256,512,256,256,64,32,32,32,16,16,8,16,0.03,0.03,0.03,0.03
+MBC,512,512,256,512,128,32,64,128,32,32,16,16,0.03,0.12,0.06,0.06

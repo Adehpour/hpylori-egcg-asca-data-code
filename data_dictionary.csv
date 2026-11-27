@@ -1,0 +1,13 @@
+field,input_scale,ASCA_transformation_before_autoscaling,archive_source
+Urease_pct,% of strain untreated,identity,assay_exports/Fig2C _ Residual urease activity (% untreated).csv
+Biofilm_pct,% of strain untreated,identity,assay_exports/Fig2C _ Biofilm biomass (% untreated).csv
+cagA_dCt,target Ct minus gyrB Ct,negate,assay_exports/Fig3A statistical model _ DeltaCt _ cagA.csv
+vacA_dCt,target Ct minus gyrB Ct,negate,assay_exports/Fig3A statistical model _ DeltaCt _ vacA.csv
+ureA_dCt,target Ct minus gyrB Ct,negate,assay_exports/Fig3A statistical model _ DeltaCt _ ureA.csv
+flaA_dCt,target Ct minus gyrB Ct,negate,assay_exports/Fig3A statistical model _ DeltaCt _ flaA.csv
+babA_dCt,target Ct minus gyrB Ct,negate,assay_exports/Fig3A statistical model _ DeltaCt _ babA.csv
+sabA_dCt,target Ct minus gyrB Ct,negate,assay_exports/Fig3A statistical model _ DeltaCt _ sabA.csv
+Associated_log10_CFU_well,log10 CFU/well,identity,Fig3B _ AGS adhesion (log10 CFU_well).csv
+Phospho_total_CagA,phospho-/total CagA,identity,assay_exports/phospho-CagA _ total CagA.csv
+Nuc_cyto_p65,nuclear/cytosolic p65,identity,Fig4A _ Nuclear _ cytosolic p65 ratio.csv
+IL8_pg_mL,pg/mL,log10,Fig4B _ Secreted IL-8 (pg_mL).csv

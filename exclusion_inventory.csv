@@ -1,0 +1,9 @@
+Assay,Design_or_rule,Available_records,Exclusion_count,Exclusion_reason,Status
+Formulation characterization,3 per F1–F5,3 batches per formulation,Not reported,Not reported,Technical readings averaged per batch
+MIC / MBC,4 per strain and treatment,4 dilution endpoints per agent,Not reported,Not reported,Analyzed endpoints reported without invented P values
+Time-kill,6 per strain and treatment,6 per group at 6 times,Not reported,Not reported,All source timepoints included
+Urease / biomass,6 per strain and group,6 normalized observations,Not reported,Not reported,Biofilm expressed relative to untreated within strain
+Six transcripts,6 per strain and group,6 biological mean ΔCt values per target,Not reported,Not reported,Reference Ct triplicates and 8 measured efficiencies reported
+Host infection endpoints,6 per strain and group,6 biological infections per endpoint,Not reported,Not reported,Technical replicates averaged within each infection
+Direct compatibility,6 culture days per group,Available reported group summaries,Not reported,Not reported,Individual day-level values not distributed
+All assays,Technical failures required documented QC reason,All 60 ASCA rows present with six per cell,Not reported,Not reported,Exclusion event log not part of this data release
