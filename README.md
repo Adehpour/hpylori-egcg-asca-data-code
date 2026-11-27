@@ -7,10 +7,13 @@ Version 1.0.0. This repository contains the data and independently implemented s
 The research datasets, CSV exports, spreadsheet, derived results, figures and
 documentation are released under **CC BY 4.0** (see `LICENSE-DATA.md`). The
 Python source code is released under the **MIT License** (see `LICENSE`).
-Please credit the study authors and cite the corresponding archived release
-using `CITATION.cff`. A version-specific DOI will be given by the public
-Zenodo release record when that record is created. No DOI is claimed here
-before that record exists.
+Please credit the study authors and cite the archived **v1.0.0** release using
+`CITATION.cff`. The version-specific Zenodo DOI is
+**[10.5281/zenodo.24595291](https://doi.org/10.5281/zenodo.24595291)**.
+For references to the complete version series, the concept DOI is
+**[10.5281/zenodo.24595290](https://doi.org/10.5281/zenodo.24595290)**.
+The versioned archive is also available via the
+[GitHub v1.0.0 release](https://github.com/Adehpour/hpylori-egcg-asca-data-code/releases/tag/v1.0.0).
 
 ## Dataset and provenance
 

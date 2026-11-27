@@ -3,6 +3,8 @@ message: "Please cite the related Scientific Reports article and the correspondi
 title: "EGCG–chitosan/TPP nanoparticle H. pylori study: ASCA data and analysis code"
 version: 1.0.0
 type: software
+doi: "10.5281/zenodo.24595291"
+url: "https://zenodo.org/records/24595291"
 authors:
   - family-names: "Darvish Nezhad Khenar"
     given-names: "Mona"
