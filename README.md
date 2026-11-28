@@ -53,7 +53,16 @@ All 60 rows are complete and uniquely identified by the three design columns. No
 | `exclusion_inventory.csv` | Assay inclusion criteria and counts of analyzed records; not a historical laboratory incident ledger. |
 | `time_kill.csv`, `mic_mbc.csv` | Available source-derived time-kill and dilution endpoint observations. |
 | `results/` | ASCA variance partition, loadings, sample scores and independently generated figure. |
-| `Supplementary_Data_Final.xlsx` | The revised supplementary workbook accompanying the manuscript, including Tables S1–S10, statistical comparisons, formulation and microbiology records, primer validation, matched ASCA inputs and sensitivity analyses. |
+| `Supplementary_Data_Final.xlsx` | The 30-sheet workbook supplied for public distribution, including Tables S1–S10, statistical comparisons, formulation and microbiology records, primer validation, matched ASCA inputs, and expression-normalization sensitivity analyses. |
+
+The public workbook is the authors' supplied 30-sheet file. It does not
+include the former standalone `Guide`, `Primary tests as reported`,
+`Exclusions`, `ASCA sensitivity`, or `Source index` worksheets, or the separate
+`Dose provenance` column formerly present in its Figure 3 dose worksheet.
+The archive continues to provide the independent comparison and exclusion
+records as `reported_primary_comparisons.csv` and `exclusion_inventory.csv`,
+the canonical source inventory as `source_inventory.csv`, and the reproducible
+ASCA implementation with its sensitivity results and source tables.
 
 The ASCA matrix and 60 reference-gene Ct culture records retain the verified
 values. Only the corrected supplementary workbook is distributed here.
