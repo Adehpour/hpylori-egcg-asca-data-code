@@ -15,6 +15,28 @@ For references to the complete version series, the concept DOI is
 The versioned archive is also available via the
 [GitHub v1.0.0 release](https://github.com/Adehpour/hpylori-egcg-asca-data-code/releases/tag/v1.0.0).
 
+## Figure numbering in the revised manuscript
+
+The final supplementary material contains one supplementary figure:
+**Figure S1, paired 24-hour time-kill reductions** (called Figure S3 in an
+earlier draft). The previously drafted reference-gene Ct and dual-reference
+normalization plots (formerly Figures S1 and S2) are not included as figures
+in the final supplementary material. Their underlying measurements and
+normalization analyses remain available in `reference_ct_lab_first_series.csv`,
+`Supplementary_E9_Data_Code_Validated_v1.xlsx`, and the other source tables
+in this repository. Their removal as figures does not remove any data.
+
+The plots in `results/Figure_7.png` and `results/Figure_7.pdf` are
+independently generated **ASCA figures corresponding to manuscript Figure 8**;
+their filenames are internal analysis outputs, not final figure numbers.
+Likewise, figure labels within the original filenames under `archive_csv/`
+identify historical assay exports and are not a numbering scheme for the
+revised manuscript.
+
+This figure-numbering note updates the documentation on the default branch.
+It does not alter the datasets, code, or immutable v1.0.0 release archived
+under the DOI above.
+
 ## Dataset and provenance
 
 The ASCA matrix (`asca_input.csv`) contains **60 biological samples, 12 measured endpoints, and three design columns**: strain, treatment and replicate number. The design has two isolates, five groups and six samples per group. **Laboratory records confirm that the 12 endpoint measurements in each row belong to the same physical bacterial culture.** Replicate numbers 1–6 are within-group sample labels; individual laboratory specimen identifiers are not necessary to interpret the anonymized matrix.
