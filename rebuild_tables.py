@@ -1,7 +1,8 @@
 """Rebuild all computable contrasts and all tabular figure inputs from the bundled CSVs.
 Run from any working directory. Outputs are written under rebuilt/.
-Per-strain host comparisons use the five-group within-strain error. Additional families
-and summary-derived tests are labelled separately in the output CSV.
+Per-strain host comparisons use the five-group within-strain error. Only
+computable tests based on experimental replicate data are included; no
+approximate P values are reconstructed from rounded manuscript summaries.
 """
 from pathlib import Path
 import csv, json, hashlib, itertools as it
@@ -125,13 +126,6 @@ for key,mat in zip(features,bdata):
  for i,j in it.combinations(range(5),2):
   eff=av[j]-av[i];p=tuk(eff/np.sqrt(ms/3),5,10)
   pair('Table 1A',key,'F1–F5','Between formulations','F'+str(j+1),'F'+str(i+1),eff,key,p,'Tukey; one-way residual, df=10','10 formulation pairs per outcome','CSV reconstruction')
-# Mucin all-pairs family uses printed sufficient statistics, so approximate to source precision.
-mucin=[[5.31,3.09],[42.25,6.78],[51.04,8.17]];mg=['Free EGCG','Blank NP','EGCG-NP']
-mms=sum(x[1]**2 for x in mucin)/3
-for i,j in it.combinations(range(3),2):
- eff=mucin[j][0]-mucin[i][0];p=tuk(eff/np.sqrt(mms/6),3,15)
- pair('Fig 2B','Mucin_pct','All','Between treatments',mg[j],mg[i],eff,'percentage points',p,'Tukey; pooled one-way residual, df=15','3 pairs derived from rounded mean, SD and n','Approximate; manuscript summaries')
-print('mucin', [r['P_adjusted'] for r in pairs[-3:]])
 # Gene family of six planned two-sided loaded-free effects.
 gp=[]
 for g in ('cagA','ureA','babA'):
@@ -154,13 +148,6 @@ for g in genes:
  for si,j in it.product(range(2),range(1,5)):
   eff=av[si,j]-av[si,0]
   pair('Fig 4',key,strains[si],'Control comparison',groups[j],groups[0],eff,'Ct cycles',dunnett4(eff/np.sqrt(mse/3)),'Dunnett, two-sided, 4 vs common control; df=50','4 treatments versus untreated within target and strain','CSV reconstruction')
-# Pairwise comparisons possible from the printed compatibility summaries, with a distinct correction family.
-for endp,values in [('Viability_pct',[(99.57,.65),(91.76,5.01),(98.57,2.45)]),('LDH_pct',[(7.74,2.04),(18.83,3.97),(12.82,4.04)])]:
- temp=[]
- for i,j in it.combinations(range(3),2):
-  a,b=values[i],values[j];test=st.ttest_ind_from_stats(b[0],b[1],6,a[0],a[1],6,equal_var=False);temp.append((i,j,b[0]-a[0],test.pvalue))
- for (i,j,e,pp),padj in zip(temp,holm([a[3] for a in temp])):
-  names=['Vehicle','Free EGCG','EGCG-NP'];pair('Fig 8',endp,'Uninfected AGS','Three reported groups',names[j],names[i],e,'percentage points',padj,'Holm-adjusted Welch, two-sided','3 exploratory pairs among available groups only','Approximate; manuscript summaries')
 # Known p-values reported by the primary record are also transcribed on a separate worksheet.
 for r in pairs:
  r['P_bound']='<' if r['P_adjusted'] < 1e-12 else '='

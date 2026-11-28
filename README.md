@@ -1,21 +1,22 @@
 # EGCG–chitosan/TPP nanoparticles and *H. pylori*: analysis data and code
 
-Version 1.1.0. This repository contains the data and independently implemented statistical scripts supporting the two-isolate *H. pylori* EGCG nanoparticle study. The v1.1.0 update adds the 35-sheet final supplementary-data workbook and harmonizes the documentation with the revised manuscript; the underlying canonical CSV inputs and ASCA code remain unchanged.
+Version 1.2.0. This repository contains the laboratory-derived data and independently implemented statistical scripts supporting the two-isolate *H. pylori* EGCG nanoparticle study. This revision removes nine summary-derived approximate statistical comparisons, corrects the supplementary-workbook provenance notes and source index, and distinguishes measured observations from calculated quantities. The canonical experimental CSV inputs and ASCA matrix are unchanged.
 
 ## Licenses and citation
 
 The research datasets, CSV exports, spreadsheet, derived results, figures and
 documentation are released under **CC BY 4.0** (see `LICENSE-DATA.md`). The
 Python source code is released under the **MIT License** (see `LICENSE`).
-Please credit the study authors and cite the **v1.1.0** release using
-`CITATION.cff` and its version-specific DOI,
-**[10.5281/zenodo.24622353](https://doi.org/10.5281/zenodo.24622353)**.
-The earlier **v1.0.0** version has DOI
+Please credit the study authors and cite the **v1.2.0** release using
+`CITATION.cff` and the version-specific DOI published with this release.
+The earlier **v1.1.0** release has DOI
+**[10.5281/zenodo.24622353](https://doi.org/10.5281/zenodo.24622353)**;
+**v1.0.0** has DOI
 **[10.5281/zenodo.24595291](https://doi.org/10.5281/zenodo.24595291)**.
 For references to the complete version series, the concept DOI is
 **[10.5281/zenodo.24595290](https://doi.org/10.5281/zenodo.24595290)**.
 The versioned archive is also available via the
-[GitHub v1.1.0 release](https://github.com/Adehpour/hpylori-egcg-asca-data-code/releases/tag/v1.1.0).
+[GitHub v1.2.0 release](https://github.com/Adehpour/hpylori-egcg-asca-data-code/releases/tag/v1.2.0).
 
 ## Figure numbering in the revised manuscript
 
@@ -52,20 +53,22 @@ All 60 rows are complete and uniquely identified by the three design columns. No
 | `reference_ct_lab_first_series.csv` | 60 culture records of gyrB and 16S rRNA technical Ct triplicates. |
 | `primer_efficiency_status.csv` | All eight validated primer pairs and their **measured** amplification efficiencies. |
 | `formulation_batches.csv` | Three physicochemical batch records for each of five nanoparticle formulations (15 total). |
-| `adjusted_contrasts.csv` | 541 adjusted comparisons, with calculation family, data scale and source class. |
+| `adjusted_contrasts.csv` | 532 comparisons computed from replicate-level source data, with correction family, scale and provenance. |
 | `reported_primary_comparisons.csv` | 38 comparisons transcribed from the original manuscript, recorded separately from reanalyses. |
 | `exclusion_inventory.csv` | Assay inclusion criteria and counts of analyzed records; not a historical laboratory incident ledger. |
 | `time_kill.csv`, `mic_mbc.csv` | Available source-derived time-kill and dilution endpoint observations. |
 | `results/` | ASCA variance partition, loadings, sample scores and independently generated figure. |
-| `Supplementary_Data_Final.xlsx` | The 35-sheet supplementary workbook accompanying the final manuscript, including Tables S1–S10, adjusted-comparison reporting, formulation and microbiology records, primer validation, ASCA inputs and sensitivity analyses. This is the preferred workbook for article-specific tables and comparison labels. |
-| `Supplementary_E9_Data_Code_Validated_v1.xlsx` | The original eight-sheet v1.0.0 reproducibility workbook, retained to preserve the earlier released package. The canonical machine-readable inputs remain the CSV files. |
+| `Supplementary_Data_Final.xlsx` | The revised supplementary workbook accompanying the manuscript, including Tables S1–S10, statistical comparisons, formulation and microbiology records, primer validation, matched ASCA inputs and sensitivity analyses. |
 
-The ASCA matrix and all 60 reference-gene Ct culture records agree numerically
-between the two workbooks. The 35-sheet workbook expands the supplementary
-tables and clarifies the provenance and statistical families of comparisons;
-it does not replace or silently rewrite the original canonical assay exports.
+The ASCA matrix and 60 reference-gene Ct culture records retain the verified
+values. Earlier spreadsheet versions are preserved in their immutable historic
+releases and are not bundled again with this corrected version.
 
-The 541 contrasts are **not** represented as 541 original statistical-model printouts. They comprise 344 reconstructions from source CSVs, 180 exploratory reanalyses, 8 sensitivity comparisons using strain-normalized source values and 9 explicitly approximate comparisons reconstructed from published means/SDs. Keep the `Source`, `Method`, `Family` and `P_bound` columns when reusing this table. Analyses of normalized biofilm values are distinct from originally reported tests on raw absorbance; no raw OD values have been manufactured.
+The 532 contrasts are **not** represented as 532 original statistical-model printouts. They comprise 344 reconstructions from replicate-level source CSVs, 180 exploratory reanalyses, and 8 sensitivity comparisons using strain-normalized observations. Nine formerly reported tests estimated from rounded manuscript summaries (three mucin comparisons, six AGS comparisons) have been removed from this release and the table-generation script. Keep the `Source`, `Method`, `Family` and `P_bound` columns when reusing this table. Biofilm percentage reanalyses must not be substituted for tests on original raw absorbance, which is not distributed.
+
+## Measured results and derived quantities
+
+The values in Tables S2 (viable-count checkpoints) and S3 (transfer outcomes) are **laboratory-reported experimental results**, as confirmed by the study authors. They are not simulated or estimated from the manuscript. The Table S5 bacterial inputs are **calculated assay aliquot equivalents at the normalization checkpoint**, based on strain-specific OD600–CFU calibration and the actual aliquot volumes; they are not a repeat CFU count at assay initiation. Table S1 contains five observed **below-LLOQ** pellet-extract results; its EGCG mass and concentration limits are **conditional analytical upper bounds**, not directly measured residual concentrations. Table S10 lists nominal administered concentrations calculated from measured MICs and the experimental dosing protocol, not chemically assayed final concentrations. No missing individual observations have been imputed.
 
 Blank numeric effect cells in `reported_primary_comparisons.csv` indicate that the corresponding effect estimate was not reported in the manuscript source; the reported P value and its comparison family remain recorded. `exclusion_inventory.csv` uses **Not reported** where the source material does not specify a retrospective exclusion count or reason. These labels do not mean that a missing value is zero.
 
@@ -90,6 +93,7 @@ python -m pip install -r requirements.txt
 python verify_package.py
 python asca_revision.py --input asca_input.csv --out results --seed 271828 --permutations 10000
 python rebuild_tables.py
+python make_manifest.py
 python verify_package.py
 ```
 

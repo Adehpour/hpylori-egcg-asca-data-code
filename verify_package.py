@@ -41,8 +41,13 @@ def main() -> None:
     batches = pd.read_csv(ROOT / "formulation_batches.csv")
     require(len(batches) == 15 and batches.groupby("formulation").size().eq(3).all(), "15 batch records")
     contrasts = pd.read_csv(ROOT / "adjusted_contrasts.csv")
-    require(len(contrasts) == 541 and "Source" in contrasts.columns, "541 labelled comparisons")
+    require(len(contrasts) == 532 and "Source" in contrasts.columns, "532 replicate-derived comparisons")
+    require(not contrasts.astype(str).apply(lambda col: col.str.contains('Approximate|manuscript summaries', case=False)).any().any(),
+            "no summary-derived approximate statistical comparisons")
     require(not contrasts["Source"].isna().any(), "all adjusted comparisons have provenance labels")
+    require((ROOT / "rebuilt" / "adjusted_contrasts.csv").read_bytes()
+            == (ROOT / "adjusted_contrasts.csv").read_bytes(),
+            "rebuilt and release-level comparisons agree exactly")
     require(len(pd.read_csv(ROOT / "reported_primary_comparisons.csv")) == 38,
             "38 separately transcribed reported primary comparisons")
     quality = pd.read_csv(ROOT / "exclusion_inventory.csv")
@@ -86,6 +91,14 @@ def main() -> None:
     if rebuilt.is_file():
         check = pd.read_csv(rebuilt, dtype={"strain": str})
         require(matrix.equals(check), "recreated matrix matches archived matrix exactly")
+
+    manifest = ROOT / "MANIFEST_SHA256.txt"
+    if manifest.is_file():
+        entries = [line.strip().split('  ', 1) for line in manifest.read_text(encoding="utf-8").splitlines()
+                   if line and not line.startswith('#')]
+        require(all(len(x) == 2 and (ROOT / x[1]).is_file()
+                    and hashlib.sha256((ROOT / x[1]).read_bytes()).hexdigest() == x[0]
+                    for x in entries), "all distributed-file SHA-256 manifest entries agree")
 
     print("\nNumerical/data-file checks passed. Matched specimen identity is based on the study's laboratory records, not inferable from de-identified CSV alone.")
 
