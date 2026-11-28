@@ -10,12 +10,6 @@ Python source code is released under the **MIT License** (see `LICENSE`).
 Please credit the study authors and cite the **v1.2.0** release using
 `CITATION.cff` and its version-specific DOI,
 **[10.5281/zenodo.24623178](https://doi.org/10.5281/zenodo.24623178)**.
-The earlier **v1.1.0** release has DOI
-**[10.5281/zenodo.24622353](https://doi.org/10.5281/zenodo.24622353)**;
-**v1.0.0** has DOI
-**[10.5281/zenodo.24595291](https://doi.org/10.5281/zenodo.24595291)**.
-For references to the complete version series, the concept DOI is
-**[10.5281/zenodo.24595290](https://doi.org/10.5281/zenodo.24595290)**.
 The versioned archive is also available via the
 [GitHub v1.2.0 release](https://github.com/Adehpour/hpylori-egcg-asca-data-code/releases/tag/v1.2.0).
 
@@ -37,8 +31,8 @@ Likewise, figure labels within the original filenames under `archive_csv/`
 identify historical assay exports and are not a numbering scheme for the
 revised manuscript.
 
-This figure-numbering note does not alter the canonical assay observations,
-analysis code, or immutable v1.0.0 release archived under the DOI above.
+This figure-numbering note does not alter the canonical assay observations
+or the analysis code in this release.
 
 ## Dataset and provenance
 
@@ -62,8 +56,7 @@ All 60 rows are complete and uniquely identified by the three design columns. No
 | `Supplementary_Data_Final.xlsx` | The revised supplementary workbook accompanying the manuscript, including Tables S1–S10, statistical comparisons, formulation and microbiology records, primer validation, matched ASCA inputs and sensitivity analyses. |
 
 The ASCA matrix and 60 reference-gene Ct culture records retain the verified
-values. Earlier spreadsheet versions are preserved in their immutable historic
-releases and are not bundled again with this corrected version.
+values. Only the corrected supplementary workbook is distributed here.
 
 The 532 contrasts are **not** represented as 532 original statistical-model printouts. They comprise 344 reconstructions from replicate-level source CSVs, 180 exploratory reanalyses, and 8 sensitivity comparisons using strain-normalized observations. Nine formerly reported tests estimated from rounded manuscript summaries (three mucin comparisons, six AGS comparisons) have been removed from this release and the table-generation script. Keep the `Source`, `Method`, `Family` and `P_bound` columns when reusing this table. Biofilm percentage reanalyses must not be substituted for tests on original raw absorbance, which is not distributed.
 
