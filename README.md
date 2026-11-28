@@ -8,8 +8,9 @@ The research datasets, CSV exports, spreadsheet, derived results, figures and
 documentation are released under **CC BY 4.0** (see `LICENSE-DATA.md`). The
 Python source code is released under the **MIT License** (see `LICENSE`).
 Please credit the study authors and cite the **v1.1.0** release using
-`CITATION.cff` and the version-specific DOI displayed by Zenodo once that
-release is archived. The earlier **v1.0.0** version has DOI
+`CITATION.cff` and its version-specific DOI,
+**[10.5281/zenodo.24622353](https://doi.org/10.5281/zenodo.24622353)**.
+The earlier **v1.0.0** version has DOI
 **[10.5281/zenodo.24595291](https://doi.org/10.5281/zenodo.24595291)**.
 For references to the complete version series, the concept DOI is
 **[10.5281/zenodo.24595290](https://doi.org/10.5281/zenodo.24595290)**.
