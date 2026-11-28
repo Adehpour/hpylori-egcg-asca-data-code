@@ -1,19 +1,20 @@
 # EGCG–chitosan/TPP nanoparticles and *H. pylori*: analysis data and code
 
-Version 1.0.0. This repository contains the data and independently implemented statistical scripts supporting the two-isolate *H. pylori* EGCG nanoparticle study.
+Version 1.1.0. This repository contains the data and independently implemented statistical scripts supporting the two-isolate *H. pylori* EGCG nanoparticle study. The v1.1.0 update adds the 35-sheet final supplementary-data workbook and harmonizes the documentation with the revised manuscript; the underlying canonical CSV inputs and ASCA code remain unchanged.
 
 ## Licenses and citation
 
 The research datasets, CSV exports, spreadsheet, derived results, figures and
 documentation are released under **CC BY 4.0** (see `LICENSE-DATA.md`). The
 Python source code is released under the **MIT License** (see `LICENSE`).
-Please credit the study authors and cite the archived **v1.0.0** release using
-`CITATION.cff`. The version-specific Zenodo DOI is
+Please credit the study authors and cite the **v1.1.0** release using
+`CITATION.cff` and the version-specific DOI displayed by Zenodo once that
+release is archived. The earlier **v1.0.0** version has DOI
 **[10.5281/zenodo.24595291](https://doi.org/10.5281/zenodo.24595291)**.
 For references to the complete version series, the concept DOI is
 **[10.5281/zenodo.24595290](https://doi.org/10.5281/zenodo.24595290)**.
 The versioned archive is also available via the
-[GitHub v1.0.0 release](https://github.com/Adehpour/hpylori-egcg-asca-data-code/releases/tag/v1.0.0).
+[GitHub v1.1.0 release](https://github.com/Adehpour/hpylori-egcg-asca-data-code/releases/tag/v1.1.0).
 
 ## Figure numbering in the revised manuscript
 
@@ -23,7 +24,7 @@ earlier draft). The previously drafted reference-gene Ct and dual-reference
 normalization plots (formerly Figures S1 and S2) are not included as figures
 in the final supplementary material. Their underlying measurements and
 normalization analyses remain available in `reference_ct_lab_first_series.csv`,
-`Supplementary_E9_Data_Code_Validated_v1.xlsx`, and the other source tables
+`Supplementary_Data_Final.xlsx`, and the other source tables
 in this repository. Their removal as figures does not remove any data.
 
 The plots in `results/Figure_7.png` and `results/Figure_7.pdf` are
@@ -33,9 +34,8 @@ Likewise, figure labels within the original filenames under `archive_csv/`
 identify historical assay exports and are not a numbering scheme for the
 revised manuscript.
 
-This figure-numbering note updates the documentation on the default branch.
-It does not alter the datasets, code, or immutable v1.0.0 release archived
-under the DOI above.
+This figure-numbering note does not alter the canonical assay observations,
+analysis code, or immutable v1.0.0 release archived under the DOI above.
 
 ## Dataset and provenance
 
@@ -56,7 +56,13 @@ All 60 rows are complete and uniquely identified by the three design columns. No
 | `exclusion_inventory.csv` | Assay inclusion criteria and counts of analyzed records; not a historical laboratory incident ledger. |
 | `time_kill.csv`, `mic_mbc.csv` | Available source-derived time-kill and dilution endpoint observations. |
 | `results/` | ASCA variance partition, loadings, sample scores and independently generated figure. |
-| `Supplementary_E9_Data_Code_Validated_v1.xlsx` | Reader-oriented Excel tables reproducing the above matrix, ASCA partition, eight primer efficiencies, 15 batches, Ct records, P-value tables and assay QC inventory. The CSV files remain the canonical machine-readable inputs. |
+| `Supplementary_Data_Final.xlsx` | The 35-sheet supplementary workbook accompanying the final manuscript, including Tables S1–S10, adjusted-comparison reporting, formulation and microbiology records, primer validation, ASCA inputs and sensitivity analyses. This is the preferred workbook for article-specific tables and comparison labels. |
+| `Supplementary_E9_Data_Code_Validated_v1.xlsx` | The original eight-sheet v1.0.0 reproducibility workbook, retained to preserve the earlier released package. The canonical machine-readable inputs remain the CSV files. |
+
+The ASCA matrix and all 60 reference-gene Ct culture records agree numerically
+between the two workbooks. The 35-sheet workbook expands the supplementary
+tables and clarifies the provenance and statistical families of comparisons;
+it does not replace or silently rewrite the original canonical assay exports.
 
 The 541 contrasts are **not** represented as 541 original statistical-model printouts. They comprise 344 reconstructions from source CSVs, 180 exploratory reanalyses, 8 sensitivity comparisons using strain-normalized source values and 9 explicitly approximate comparisons reconstructed from published means/SDs. Keep the `Source`, `Method`, `Family` and `P_bound` columns when reusing this table. Analyses of normalized biofilm values are distinct from originally reported tests on raw absorbance; no raw OD values have been manufactured.
 
